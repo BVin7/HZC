@@ -1,0 +1,32 @@
+@import url("css/header.css");
+
+@font-face {
+    font-family: 'icones';
+    src: url("font/icones.ttf");
+}
+
+:root {
+    /*cores*/
+    --cor-de-fundo: #1D232A;
+    --header-cor: #15191C;
+    --branco: #FFFFFF;
+    --cinza: #95999C;
+
+
+    /*fontes*/
+    --fonte-principal: 'Open Sans', sans-serif;
+    --fonte-icones: 'icones';
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+
+    font-family: var(--fonte-principal);
+
+    color: var(--branco);
+
+    font-size: 1rem;
+    font-weight: 400;
+
+    line-height: 2rem;
+}

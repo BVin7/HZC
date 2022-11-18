@@ -1,0 +1,122 @@
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--header-cor);
+
+    padding: 0.5rem 1rem;
+
+    box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.16);
+}
+
+.cabecalho__menu, 
+.cabecalho__notificacao {
+    border: none;
+    
+    background: var(--header-cor);
+    color: var(--branco);
+
+}
+
+.cabecalho__menu i::before,
+.cabecalho__notificacao i::before {
+    font-family: var(--fonte-icones);
+    font-size: 1.5rem;
+    
+    content: "\e904";
+}
+
+.cabecalho__notificacao i::before {
+    content: "\e906";
+}
+
+.menu-lateral {
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--header-cor);
+
+    width: 70vw;
+    height: 100vh;
+
+    position: absolute;
+    left: -100vw;
+
+    transition: .25s;
+}
+
+.menu-lateral--ativo {
+    left: 0;
+
+    transition: .25s;
+}
+
+.menu-lateral__logo {
+    align-self: center;
+
+    width: 7.375rem;
+
+    padding: 1rem;
+}
+
+.menu-lateral__link {
+    display: flex;
+    align-items: center;
+    
+    padding-left: 4rem;
+    
+    height: 4rem;
+
+    color: var(--cinza);
+
+    text-decoration: none;
+}
+
+.menu-lateral__link--ativo {
+    color: var(--branco);
+
+    padding-left: 3.5rem;
+
+    border-left: 0.5rem solid var(--branco);
+}
+
+.menu-lateral__link::before {
+    font-family: var(--fonte-icones);
+    
+    content: "";
+    
+    width: 1.5rem;
+
+    height: 1.5rem;
+    
+    font-size: 1.5rem;
+
+    position: absolute;
+
+    left: 1.5rem;
+}
+
+.menu-lateral__link--inicio::before {
+    content: "\e902";
+}
+
+.menu-lateral__link--videos::before {
+    content: "\e90e";
+}
+
+.menu-lateral__link--picos::before {
+    content: "\e909";
+}
+
+.menu-lateral__link--integrantes::before {
+    content: "\e903";
+}
+
+.menu-lateral__link--camisas::before {
+    content: "\e900";
+}
+
+.menu-lateral__link--pinturas::before {
+    content: "\e90a";
+}
