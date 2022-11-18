@@ -10,18 +10,8 @@
     box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.16);
 }
 
-.cabecalho__menu, 
-.cabecalho__notificacao {
-    border: none;
-    
-    background: var(--header-cor);
-    color: var(--branco);
-
-}
-
 .cabecalho__menu i::before,
 .cabecalho__notificacao i::before {
-    font-family: var(--fonte-icones);
     font-size: 1.5rem;
     
     content: "\e904";
@@ -82,8 +72,6 @@
 }
 
 .menu-lateral__link::before {
-    font-family: var(--fonte-icones);
-    
     content: "";
     
     width: 1.5rem;

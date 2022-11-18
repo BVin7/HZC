@@ -1,4 +1,5 @@
 @import url("css/header.css");
+@import url("css/inicio.css");
 
 @font-face {
     font-family: 'icones';
@@ -9,6 +10,8 @@
     /*cores*/
     --cor-de-fundo: #1D232A;
     --header-cor: #15191C;
+    --cor-cartao: #2C343A;
+    --azul-botao: #0480DC;
     --branco: #FFFFFF;
     --cinza: #95999C;
 
@@ -21,7 +24,7 @@
 body {
     background-color: var(--cor-de-fundo);
 
-    font-family: var(--fonte-principal);
+    font-family: var(--fonte-principal), var(--fonte-icones);
 
     color: var(--branco);
 

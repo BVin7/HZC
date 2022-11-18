@@ -1,0 +1,93 @@
+.principal {
+    padding: 1.5rem 1rem;
+}
+
+.titulo-pagina {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.cartao {
+    width: 100%;
+
+    border-radius: 0.9375rem;
+
+    overflow: hidden;
+
+    background-color: var(--cor-cartao);
+}
+
+.cartao__conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    padding: 1rem;
+}
+
+.cartao__destaque {
+    grid-column: span 2;
+}
+
+.cartao__titulo {
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    grid-column: span 2;
+}
+
+.cartao__perfil {
+    color: var(--cinza);
+
+    font-size: 0.9rem;
+
+    grid-column: span 2;
+}
+
+.cartao__info {
+    display: flex;
+    align-items: center;
+
+    color: var(--cinza);
+}
+
+.cartao__info--tempo::before, 
+.cartao__info--visualizacao::before {
+    content: "\e90c";
+
+    margin-right: 0.5rem;
+}
+
+.cartao__info--visualizacao::before {
+    content: "\e90f";
+}
+
+.cartao__botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--azul-botao);
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    border-radius: 0.625rem;
+
+    font-size: 0.9rem;
+}
+
+.cartao__botao--play::before {
+    content: "\e90b";
+
+    font-size: 1.5rem;
+}
+
+.cartao__botao--destaque {
+    width: 100%;
+
+    grid-column: span 2;
+}
+
+.cartao__botao--destaque::before {
+    margin-right: 0.5rem;
+}
