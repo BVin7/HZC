@@ -1,0 +1,247 @@
+.principal {
+    display: grid;
+    gap: 1rem;
+    
+    padding: 1.5rem 1rem;
+}
+
+.titulo-pagina {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.cartao {
+    width: 100%;
+
+    border-radius: 0.9375rem;
+
+    overflow: hidden;
+
+    background-color: var(--cor-cartao);
+}
+
+.cartao--destaque {
+    margin-bottom: 1rem;
+}
+
+.cartao__imagem--desktop {
+    display: none;
+}
+
+.cartao__conteudo {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem;
+
+    padding: 1rem;
+}
+
+.cartao__destaque {
+    grid-column: span 2;
+}
+
+.cartao__titulo {
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    grid-column: span 2;
+}
+
+.cartao__perfil {
+    color: var(--cinza);
+
+    font-size: 0.9rem;
+
+    grid-column: span 2;
+}
+
+.cartao__info {
+    display: flex;
+    align-items: center;
+
+    color: var(--cinza);
+}
+
+.cartao__info--tempo::before, 
+.cartao__info--visualizacao::before {
+    content: "\e90c";
+
+    margin-right: 0.5rem;
+}
+
+.cartao__info--visualizacao::before {
+    content: "\e90f";
+}
+
+.cartao__botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: flex-end;
+
+    background-color: var(--azul-botao);
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    border-radius: 0.625rem;
+
+    font-size: 0.9rem;
+}
+
+.cartao__botao--play::before {
+    content: "\e90b";
+
+    font-size: 1.5rem;
+}
+
+.cartao__botao--destaque {
+    width: 100%;
+
+    grid-column: span 2;
+}
+
+.cartao__botao--destaque::before {
+    margin-right: 0.5rem;
+}
+
+.cartao--recentes {
+    display: none;
+}
+
+.secao {
+    display: grid;
+    gap: 1rem;
+}
+
+.titulo-secao {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+@media (width >= 1440px) {
+    .principal {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: 
+        "titulo-pagina titulo-pagina titulo-pagina"
+        "destaque-video destaque-video videos-recentes"
+        "secao-videos secao-videos secao-videos"
+        "produtos-recentes destaque-produtos destaque-produtos"
+        "secao-produtos secao-produtos secao-produtos";
+        column-gap: 2rem;
+        grid-column: 2;
+
+        padding: 1rem 3.75rem;
+    }
+
+    .titulo-pagina {
+        grid-area: titulo-pagina;
+    }
+
+    .destaque-video {
+        grid-area: destaque-video;
+    }
+
+    .videos-recentes {
+        grid-area: videos-recentes;
+    }
+
+    .secao-videos {
+        grid-area: secao-videos;
+    }
+
+    .destaque-produtos {
+        grid-area: destaque-produtos;
+    }
+
+    .produtos-recentes {
+        grid-area: produtos-recentes;
+    }
+
+    .secao-produtos {
+        grid-area: secao-produtos;
+    }
+
+    .cartao--destaque {
+        margin-bottom: 0;
+    }
+
+    .cartao__imagem--mobile {
+        display: none;
+    }
+
+    .cartao__imagem--desktop {
+        display: block;
+    }
+
+    .cartao__botao--destaque {
+        grid-column: auto;
+    }
+
+    .cartao--recentes {
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        align-self: flex-start;
+        row-gap: 1.5rem;
+
+        width: 16rem;
+
+        padding: 1rem;
+
+        box-sizing: border-box;
+    }
+
+    .cartao--recentes, 
+    .cartao__titulo {
+        grid-column: auto;
+    }
+
+    .cartao__link {
+        font-size: 0.8rem;
+        font-weight: 600;
+
+        color: var(--azul-botao);
+
+        justify-self: flex-end;
+    }
+
+    .cartao__lista {
+        display: grid;
+        row-gap: 1rem;
+        grid-column: span 2;
+    }
+
+    .cartao__item {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0.5rem;
+    }
+
+    .cartao__item-thumbnail {
+        width: 2rem;
+        grid-row: span 2;
+    }
+
+    .cartao__item-titulo {
+        font-size: 0.9rem;
+        font-weight: 700;
+
+        line-height: 1.2rem;
+    }
+
+    .cartao__item-perfil {
+        font-size: 0.8rem;
+        
+        color: var(--cinza);
+    }
+
+    .secao {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .titulo-secao {
+        grid-column: span 4;
+    }
+}

@@ -1,5 +1,5 @@
 @import url("css/header.css");
-@import url("css/inicio.css");
+@import url("css/main.css");
 
 @font-face {
     font-family: 'icones';
@@ -32,4 +32,11 @@ body {
     font-weight: 400;
 
     line-height: 2rem;
+}
+
+@media (width >= 1440px) {
+    body {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
 }
