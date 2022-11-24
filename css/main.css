@@ -32,6 +32,7 @@
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 0.5rem;
+    column-gap: 1.5rem;
 
     padding: 1rem;
 }
@@ -45,6 +46,10 @@
     font-weight: 700;
 
     grid-column: span 2;
+}
+
+.mais-vistos-e-mais-recentes__espaco {
+    margin-bottom: 1.5rem;
 }
 
 .cartao__perfil {
@@ -69,6 +74,10 @@
     margin-right: 0.5rem;
 }
 
+.cartao__info--custo::before {
+    content: "\e905";
+}
+
 .cartao__info--visualizacao::before {
     content: "\e90f";
 }
@@ -87,12 +96,20 @@
     border-radius: 0.625rem;
 
     font-size: 0.9rem;
+    font-weight: 600;
 }
 
 .cartao__botao--play::before {
     content: "\e90b";
 
     font-size: 1.5rem;
+}
+
+.cartao__botao--carrinho::before {
+    content: "\e901";
+
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
 .cartao__botao--destaque {
