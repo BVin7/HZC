@@ -26,8 +26,8 @@
     margin-bottom: 1rem;
 }
 
-.cartao__imagem--desktop {
-    display: none;
+.cartao__imagem {
+    width: 100%;
 }
 
 .cartao__conteudo {
@@ -184,14 +184,6 @@
 
     .cartao--destaque {
         margin-bottom: 0;
-    }
-
-    .cartao__imagem--mobile {
-        display: none;
-    }
-
-    .cartao__imagem--desktop {
-        display: block;
     }
 
     .cartao__botao--destaque {

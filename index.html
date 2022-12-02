@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HZC | Home</title>
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="icon" href="img/Logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
     <header class="cabecalho">
@@ -21,9 +21,9 @@
     </header>
     <nav class="menu-lateral">
         <img src="img/Logo.svg" alt="Logotipo da HZC" class="menu-lateral__logo">
-        <a href="#" class="menu-lateral__link menu-lateral__link--inicio menu-lateral__link--ativo">Início</a>
+        <a href="index.html" class="menu-lateral__link menu-lateral__link--inicio menu-lateral__link--ativo">Início</a>
         <a href="#" class="menu-lateral__link menu-lateral__link--videos">Vídeos</a>
-        <a href="#" class="menu-lateral__link menu-lateral__link--picos">Picos</a>
+        <a href="picos.html" class="menu-lateral__link menu-lateral__link--picos">Picos</a>
         <a href="#" class="menu-lateral__link menu-lateral__link--integrantes">Integrantes</a>
         <a href="#" class="menu-lateral__link menu-lateral__link--camisas">Camisas</a>
         <a href="#" class="menu-lateral__link menu-lateral__link--pinturas">Pinturas</a>
@@ -31,8 +31,10 @@
     <main class="principal">
             <h2 class="titulo-pagina">Início</h2>
             <article class="cartao cartao--destaque destaque-video">
-                <img src="img/banner-mobile_1.svg" alt="Banner do cartão" class="cartao__imagem--mobile">
-                <img src="img/banner_1.svg" alt="Banner do cartão" class="cartao__imagem--desktop">
+                <picture>
+                    <source srcset="img/banner_1.svg" media="(width >= 1440px)">
+                    <img src="img/banner-mobile_1.svg" alt="Banner do cartão" class="cartao__imagem">
+                </picture>
                 <div class="cartao__conteudo">
                     <p class="cartao__destaque">Vídeo em destaque</p>
                     <h3 class="cartao__titulo">HZC - Life is... / 2021</h3>
@@ -144,8 +146,10 @@
                 </ul>
             </article>
             <article class="cartao cartao--destaque destaque-produtos">
-                <img src="img/banner-mobile_2.svg" alt="Banner do cartão" class="cartao__imagem--mobile">
-                <img src="img/banner_2.svg" alt="Banner do cartão" class="cartao__imagem--desktop">
+                <picture>
+                    <source srcset="img/banner_2.svg" media="(width >= 1440px)">
+                    <img src="img/banner-mobile_2.svg" alt="Banner do cartão" class="cartao__imagem">
+                </picture>
                 <div class="cartao__conteudo">
                     <p class="cartao__destaque">Nova arte</p>
                     <h3 class="cartao__titulo">Only Zikas - Lagoa Dompa Club</h3>
@@ -195,6 +199,6 @@
                 </article>
             </section>
     </main>
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
