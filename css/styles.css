@@ -1,0 +1,246 @@
+@font-face {
+    font-family: 'icones';
+    src: url("../font/icones.ttf");
+}
+
+:root {
+    /*cores*/
+    --cor-de-fundo: #1D232A;
+    --header-cor: #15191C;
+    --cor-cartao: #2C343A;
+    --azul-botao: #0480DC;
+    --branco: #FFFFFF;
+    --cinza: #95999C;
+    --sombra: rgba(0, 0, 0, 0.16);
+
+    /*fontes*/
+    --fonte-principal: 'Open Sans', sans-serif;
+    --fonte-icones: 'icones';
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-principal), var(--fonte-icones);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 3.2rem;
+    color: var(--branco);
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: var(--header-cor);
+    box-shadow: 0rem .4rem .4rem var(--sombra);
+    padding: .8rem 1.6rem;
+}
+
+.cabecalho > button {
+	font-size: 2.4rem;
+}
+
+.cabecalho > button[aria-label=Menu]::before {
+    content: '\e904';
+}
+
+.cabecalho > button[aria-label=Notificações]::before {
+    content: '\e906';
+}
+
+.menu-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    position: absolute;
+    background-color: var(--header-cor);
+    transform: translateX(-100%);
+    transition: all ease-in-out .25s;
+    width: 60vw;
+    height: 100vh;
+}
+
+.menu-lateral--ativo {
+    transform: translateX(0%);
+}
+
+.menu-lateral > img {
+    width: 11.8rem;
+    margin-bottom: 1.6rem;
+    align-self: center;
+}
+
+.menu-lateral__item {
+    padding: 1.6rem;
+    border-left: .8rem solid transparent;
+}
+
+.item--ativo {
+    border-left: .8rem solid var(--branco);
+}
+
+.menu-lateral__link {
+    text-decoration: none;
+    color: var(--cinza);
+}
+
+.menu-lateral__link::before {
+    margin-right: 1.6rem;
+}
+
+.link-inicio::before {
+    content: '\e902';
+}
+
+.menu-lateral__link--ativo {
+    color: var(--branco);
+}
+
+.link-videos::before {
+    content: '\e90e';
+}
+
+.link-picos::before {
+    content: '\e909';
+}
+
+.link-integrantes::before {
+    content: '\e903';
+}
+
+.link-camisas::before {
+    content: '\e900';
+}
+
+.link-pinturas::before {
+    content: '\e90a';
+}
+
+main {
+    padding: 1.6rem;
+}
+
+.titulo-pagina {
+    display: inline-block;
+    font-size: 2.6rem;
+    font-weight: 700;
+    padding: 1.6rem 0 1.6rem 0;
+}
+
+.cartao-destaque,
+.cartao {
+    background-color: var(--cor-cartao);
+    border-radius: 1.6rem;
+}
+
+.cartao__imagem {
+    width: 100%;
+    grid-column: span 2;
+}
+
+.cartao__container-destaque {
+    padding: 1rem 1.6rem 1.6rem 1.6rem;
+}
+
+.cartao__titulo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    margin: 1rem 0;
+    grid-column: span 2;
+}
+
+.cartao__autor {
+    display: block;
+}
+
+.cartao__autor, 
+.cartao__info {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: var(--cinza);
+}
+
+.cartao__info {
+    display: inline-block;
+    margin: .8rem 2.0rem .8rem 0;
+}
+
+.info__tempo::before, 
+.info__visualizacoes::before {
+    content: '\e90c';
+    margin-right: .5rem;
+}
+
+.info__visualizacoes::before {
+    content: '\e90f';
+}
+
+.cartao__botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 2;
+    gap: .8rem;
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.6rem;
+    border-radius: .8rem;
+    padding: 1.2rem;
+    background-color: var(--azul-botao);
+    color: var(--branco);
+}
+
+.botao__play::before {
+    content: '\e90b';
+    font-size: 2.4rem;
+}
+
+.secao-populares {
+    margin-top: 2.8rem;
+}
+
+.secao-populares__titulo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+}
+
+.cartao {
+    margin-top: 1.6rem;
+}
+
+.cartao__container-conteudo {
+    padding: 1rem 1.6rem 1.6rem 1.6rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.cartao__botaozinho {
+    background-color: var(--azul-botao);
+    border-radius: .8rem;
+    font-weight: 700;
+    height: 4.0rem;
+    width: 4.0rem;
+}
+
+.cartao-destaque__secundario {
+    margin: 3.2rem 0;
+}
+
+.info__valor::before {
+    content: '\e905';
+}
+
+.botao__carrinho::before {
+    content: '\e901';
+    font-size: 2.4rem;
+}
+
+@media (width >= 1440px) {}

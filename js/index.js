@@ -1,5 +1,5 @@
 //Menu hamburguer do header
-const botaoMenu = document.querySelector(".cabecalho__menu");
+const botaoMenu = document.querySelector("#botao-menu");
 const menu = document.querySelector(".menu-lateral")
 
 botaoMenu.addEventListener('click', evento => {
